@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::selection{
+    background-color: var(--main-color);
+    color: var(--white-color);
+}
+:root{
+    --main-color:#44b564;
+    --white-color:#fff;
+    --bold-color: #333333;
+    --text-color: #777777;
+    --danger-color: #ff0000;
+    --bg-color: #cac5c52e;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/*---------------
+        utilities
+------------ ---- */
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-image: url(images/covid-right-half.png);
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-attachment: fixed;
+}
+main{
+    background-image: url(images/covid-left-half.png);
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    padding: 50px 10%;
+}
+.denger{
+    color: var(--danger-color);   
+}
+
+.section__heading {
+    font-size: 2em;
+    color: var(--bold-color);
+    font-weight: 700;
+  }
+  
+  .description {
+    color: var(--text-color);
+    font-size: 1.1em;
+    text-align: justify;
+  }
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 15px 10%;
+    font-size: 18px;
+}
+.logo{
+    list-style: none;
+}
+.logo li a {
+    display: flex;
+    align-items: center;
+    color: var(--bold-color);
+    font-weight: 700;
+    font-size: 1.1em;
+  }
+  .logo li a img{
+      width: 60px;
+      height: 60px;
+  }
+  .brand__color{
+      color: var(--main-color);
+  }
+.logo__name{
+    margin-left: 7px;
+}
+.nav__items{
+    list-style: none;
+    display: flex;
+}
+.nav__items li{
+    margin-right: 20px;
+}
+.nav__items li a {
+    color: var(--text-color);
+    transition: color 0.8s ease-in-out;
+    font-weight: 600;
+  }
+  .nav__items li a:hover {
+    color: var(--main-color);
+  }
+
+  .menu__button {
+    font-size: 20px;
+    color: var(--white-color);
+    padding: 3px 15px;
+    display: none;
+    background-color: var(--main-color);
+    border-radius: 5px;
+  }
+  
+  #click {
+    transition: all 0.8s ease-in-out;
+    display: none;
+  }
+
+/* banner section style start */
+
+#banner{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.banner__image img{
+    width: 90%;
+    margin-right: 0 auto;
+    object-fit: cover;
+}
+.banner__content{
+    display: flex;
+    align-items: center;
+    
+}
+
+.banner__button{
+    padding: 15px 20px;
+    border-radius: 35px;
+    background-color: var(--main-color);
+    outline: 0;
+    border: 0;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+.banner__button:hover {
+    background-color: #345f40;
+  }
+
+  .banner__button a{
+      color: var(--white-color);
+      font-weight: 700;
+  }
+
+  #situation{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+    padding: 70px 30px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 30px 2px #a3a1a1;
+    background-image: linear-gradient(
+        22.5deg,
+        rgba(242, 242, 242, 0.03) 0%,
+        rgba(242, 242, 242, 0.03) 16%,
+        rgba(81, 81, 81, 0.03) 16%,
+        rgba(81, 81, 81, 0.03) 26%,
+        rgba(99, 99, 99, 0.03) 26%,
+        rgba(99, 99, 99, 0.03) 73%,
+        rgba(43, 43, 43, 0.03) 73%,
+        rgba(43, 43, 43, 0.03) 84%,
+        rgba(213, 213, 213, 0.03) 84%,
+        rgba(213, 213, 213, 0.03) 85%,
+        rgba(125, 125, 125, 0.03) 85%,
+        rgba(125, 125, 125, 0.03) 100%
+      ),
+      linear-gradient(
+        22.5deg,
+        rgba(25, 25, 25, 0.03) 0%,
+        rgba(25, 25, 25, 0.03) 54%,
+        rgba(144, 144, 144, 0.03) 54%,
+        rgba(144, 144, 144, 0.03) 60%,
+        rgba(204, 204, 204, 0.03) 60%,
+        rgba(204, 204, 204, 0.03) 76%,
+        rgba(37, 37, 37, 0.03) 76%,
+        rgba(37, 37, 37, 0.03) 78%,
+        rgba(115, 115, 115, 0.03) 78%,
+        rgba(115, 115, 115, 0.03) 91%,
+        rgba(63, 63, 63, 0.03) 91%,
+        rgba(63, 63, 63, 0.03) 100%
+      ),
+      linear-gradient(
+        157.5deg,
+        rgba(71, 71, 71, 0.03) 0%,
+        rgba(71, 71, 71, 0.03) 6%,
+        rgba(75, 75, 75, 0.03) 6%,
+        rgba(75, 75, 75, 0.03) 15%,
+        rgba(131, 131, 131, 0.03) 15%,
+        rgba(131, 131, 131, 0.03) 18%,
+        rgba(110, 110, 110, 0.03) 18%,
+        rgba(110, 110, 110, 0.03) 37%,
+        rgba(215, 215, 215, 0.03) 37%,
+        rgba(215, 215, 215, 0.03) 62%,
+        rgba(5, 5, 5, 0.03) 62%,
+        rgba(5, 5, 5, 0.03) 100%
+      ),
+      linear-gradient(90deg, #ffffff, #ffffff);
+  }
+
+  #situation p {
+    text-align: center;
+  }
+  
+  .situation__card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .situation__card h4 {
+    color: var(--bold-color);
+    font-weight: 700;
+    font-size: 1.1em;
+  }
+  
+  .situation__card h3 {
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 1.5em;
+  }
+
+/* banner section style end */
+
+  /* @media only screen and(max-width:992px) {
+    .menu__button {
+        display: block;
+        position: fixed;
+        right: 0;
+        z-index: 1030;
+      }
+    
+      #click:checked ~ .menu__button i::before {
+        content: "\f00d";
+      }
+    
+      .nav__items {
+        position: fixed;
+        top: 60px;
+        display: block;
+        right: -35%;
+        height: 100vh;
+        width: 35%;
+        text-align: center;
+        transition: all 0.6s ease-in-out;
+        background-image: repeating-linear-gradient(
+            135deg,
+            rgba(0, 0, 0, 0.05),
+            rgba(0, 0, 0, 0.06),
+            rgba(0, 0, 0, 0.05),
+            transparent,
+            rgba(0, 0, 0, 0.05),
+            rgba(0, 0, 0, 0.1),
+            rgba(0, 0, 0, 0.1),
+            rgba(0, 0, 0, 0.06),
+            rgba(0, 0, 0, 0.02),
+            rgba(0, 0, 0, 0.05),
+            rgba(0, 0, 0, 0.04),
+            rgba(0, 0, 0, 0.02),
+            rgba(0, 0, 0, 0.07) 3px
+          ),
+          linear-gradient(90deg, rgb(63, 122, 63), rgb(218, 204, 62));
+      }
+    
+      #click:checked ~ ul {
+        right: 0;
+      }
+    
+      .nav__items li {
+        margin: 15px 0;
+      }
+    
+      .nav__items li a {
+        color: #fff;
+      }
+  } */
