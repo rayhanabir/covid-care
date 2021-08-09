@@ -123,7 +123,7 @@ nav{
 
 /* banner section style start */
 
-#banner,.about{
+#banner,.about, .contact{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
@@ -317,4 +317,62 @@ nav{
 .contact__image img{
     width: 600px;
 }
-    
+
+/* contact start */
+
+.contact{
+   margin-top: 50px;
+}
+.single__number{
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+.number__image{
+    margin-right: 10px;
+}
+
+.form__input {
+    background-color: var(--bg-color);
+    padding: 8px 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    display: flex;
+  }
+
+  .form__input i {
+    margin-right: 13px;
+    color: var(--text-color);
+  }
+  
+input,
+textarea {
+  border: 0;
+  width: 100%;
+  background-color: #cac5c500;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input:focus,
+textarea:focus {
+  outline: 0;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-color);
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+}
